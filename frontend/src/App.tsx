@@ -48,7 +48,7 @@ export default function App() {
       currentText += botText[i];
       setMessages((prev) => [
         ...prev.filter(
-          (m, idx) =>
+          (_, idx) =>
             !(idx === prev.length - 1 && prev[prev.length - 1].sender === "bot")
         ),
         { sender: "bot", text: currentText + "|" },
@@ -58,7 +58,7 @@ export default function App() {
 
     setMessages((prev) => [
       ...prev.filter(
-        (m, idx) =>
+        (_, idx) =>
           !(idx === prev.length - 1 && prev[prev.length - 1].sender === "bot")
       ),
       { sender: "bot", text: botText },
