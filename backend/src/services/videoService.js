@@ -43,7 +43,7 @@ export const analyzeContent = async ({ url }) => {
       // YouTube: fetch transcript from FastAPI
       console.log("DEBUG: Fetching YouTube transcript from FastAPI...");
       const response = await axios.post(
-        "https://misinfo-detection.onrender.com",
+        "https://misinfo-detection.onrender.com/transcript/video",
         { url }
       );
       transcriptText = response.data.transcript;
