@@ -75,7 +75,8 @@ export default function App() {
     setInput("");
 
     try {
-      const response = await fetch("https://misinfo-detection-backend.onrender.com", {
+      const response = await fetch("https://misinfo-detection-backend.onrender.com/api/gemini/check
+", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content: input }),
